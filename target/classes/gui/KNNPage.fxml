@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="327.0" prefWidth="313.0" xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.KNNPage">
+   <Button fx:id="chooseFile" layoutX="18.0" layoutY="43.0" mnemonicParsing="false" onAction="#chooseFile"
+           prefHeight="25.0" prefWidth="274.0" text="choose data file"/>
+   <Button fx:id="trainButton" layoutX="20.0" layoutY="205.0" mnemonicParsing="false" onAction="#train"
+           prefHeight="52.0" prefWidth="274.0" text="TRAIN AND VALIDATE" textAlignment="CENTER" wrapText="true"/>
+   <Button fx:id="testButton" layoutX="18.0" layoutY="273.0" mnemonicParsing="false" onAction="#test" prefHeight="52.0"
+           prefWidth="274.0" text="TEST"/>
+   <TextField fx:id="kTextField" layoutX="18.0" layoutY="98.0" prefHeight="25.0" prefWidth="187.0"
+              promptText="k neighbors"/>
+   <HBox alignment="CENTER_LEFT" layoutX="18.0" layoutY="123.0" prefHeight="25.0" prefWidth="202.0" spacing="10.0">
+      <RadioButton fx:id="euclideanRadio" mnemonicParsing="false" text="EUCLIDEAN">
+         <toggleGroup>
+            <ToggleGroup fx:id="distanceToggle"/>
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="manhattanRadio" mnemonicParsing="false" text="MANHATTAN" toggleGroup="$distanceToggle"/>
+   </HBox>
+   <Label fx:id="filenameLabel" alignment="CENTER" layoutX="18.0" layoutY="75.0" prefHeight="17.0" prefWidth="274.0"
+          text="filename" textAlignment="CENTER" wrapText="true"/>
+   <Slider fx:id="trainSlider" layoutX="68.0" layoutY="179.0" prefHeight="14.0" prefWidth="166.0"/>
+   <Label layoutX="19.0" layoutY="178.0" prefHeight="17.0" prefWidth="49.0" text="Train %"/>
+   <Spinner fx:id="trainSpinner" editable="true" layoutX="238.0" layoutY="174.0" prefHeight="25.0" prefWidth="57.0"/>
+   <Button fx:id="defaultKButton" layoutX="215.0" layoutY="98.0" mnemonicParsing="false" onAction="#defaultNeighbors"
+           prefHeight="25.0" prefWidth="77.0" text="default"/>
+   <Label layoutX="20.0" layoutY="14.0" text="KNN"/>
+</AnchorPane>

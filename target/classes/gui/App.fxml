@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane fx:id="rootPane" prefHeight="350.0" prefWidth="689.0" stylesheets="@css/stylesheet.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AppCtrl">
+   <children>
+      <AnchorPane layoutX="370.0" layoutY="20.0" prefHeight="359.0" prefWidth="297.0" stylesheets="@css/stylesheet.css">
+         <children>
+            <GridPane layoutX="7.0" layoutY="35.0" stylesheets="@css/stylesheet.css">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.5" minWidth="10.0" prefWidth="66.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="134.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="17.0" prefWidth="74.0" text="Accuracy" textAlignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></Label>
+                  <Label prefHeight="17.0" prefWidth="69.0" text="Precision" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></Label>
+                  <Label prefHeight="17.0" prefWidth="67.0" text="Recall" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></Label>
+                  <Label prefHeight="17.0" prefWidth="83.0" stylesheets="@css/stylesheet.css" text="F1 score" GridPane.rowIndex="3">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></Label>
+                  <Label GridPane.columnIndex="1" />
+                  <Label GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label fx:id="accuracyLabel" alignment="CENTER" text="___" GridPane.columnIndex="1">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding></Label>
+                  <Label fx:id="precisionLabel" text="___" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding></Label>
+                  <Label fx:id="recallLabel" text="___" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding></Label>
+                  <Label fx:id="f1Label" text="___" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding></Label>
+               </children>
+               <styleClass>
+                  <String fx:value="grid-pane" />
+                  <String fx:value="cell" />
+               </styleClass>
+            </GridPane>
+            <GridPane alignment="CENTER" layoutX="7.0" layoutY="216.0" prefHeight="90.0" prefWidth="211.0" stylesheets="@css/stylesheet.css">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label contentDisplay="CENTER" prefHeight="17.0" prefWidth="72.0" text="positive" wrapText="true" GridPane.columnIndex="1">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="70.0" text="positive" textAlignment="CENTER" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="truePositivesLabel" text="___" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="falseNegativesLabel" text="___" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="falsePositivesLabel" text="___" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="trueNegativesLabel" text="___" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="negative" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Label text="negative" GridPane.columnIndex="2">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="grid-pane" />
+                  <String fx:value="cell" />
+               </styleClass>
+            </GridPane>
+            <Label layoutX="7.0" layoutY="14.0" text="Evaluation metrics" />
+            <Label layoutX="7.0" layoutY="193.0" text="Confusion matrix" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

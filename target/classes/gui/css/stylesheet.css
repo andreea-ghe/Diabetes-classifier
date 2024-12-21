@@ -1,0 +1,123 @@
+.root {
+    -fx-background-color: #dbdace;
+}
+.grid-pane {
+    -fx-border-width: 0.5;
+    -fx-border-style: solid;
+    -fx-border-insets: 0, 1 1 0 0;
+    -fx-border-radius: 3;
+}
+
+.cell {
+    -fx-border-color: #78864E;
+    -fx-border-width: 0.5;
+    -fx-border-style: solid;
+}
+
+.anchor-pane {
+    -fx-background-color: #F2EED7;
+}
+
+.button {
+    -fx-background-color: #78864E;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+}
+
+.button:hover {
+    -fx-background-color: #6A7C41;
+}
+
+.grid-pane {
+    -fx-border-color: #5C6D3C;
+    -fx-border-width: 2px;
+    -fx-background-color: #F9F6E4;
+    -fx-padding: 5px;
+}
+
+.cell {
+    -fx-border-color: #C5C3B4;
+    -fx-border-width: 0.5px;
+    -fx-padding: 5px;
+    -fx-alignment: center;
+    -fx-font-size: 12px;
+    -fx-text-fill: #5C6D3C;
+}
+
+.label {
+    -fx-text-fill: #5C6D3C;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+.label.grid-value {
+    -fx-text-fill: #333333;
+    -fx-font-size: 12px;
+    -fx-font-weight: normal;
+}
+
+/* Slider styling */
+.slider .track {
+    -fx-background-color: #C5C3B4;
+}
+
+.slider .thumb {
+    -fx-background-color: #78864E;
+}
+
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: #78864E;
+    -fx-border-color: #5C6D3C;
+}
+
+.spinner .text-field {
+    -fx-background-color: #F9F6E4;
+    -fx-text-fill: #5C6D3C;
+}
+
+.radio-button {
+    -fx-text-fill: #5C6D3C;
+}
+
+.radio-button .radio {
+    -fx-padding: 2px;
+    -fx-background-color: #78864E, white;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 10, 8;
+    -fx-pref-width: 12px;
+    -fx-pref-height: 12px;
+}
+
+.pagination {
+    -fx-background-color: #dbdace;
+}
+
+.pagination > .pagination-control > .control-box > .number-button,
+.pagination > .pagination-control > .control-box > .bullet-button,
+.pagination > .pagination-control > .control-box > .left-arrow-button,
+.pagination > .pagination-control > .control-box > .right-arrow-button {
+    -fx-background-insets: 0, 1;
+    -fx-background-color: lightgray, #FAFAFA;
+    -fx-min-width: 30;
+    -fx-min-height: 30;
+}
+
+.pagination > .pagination-control > .control-box > .number-button:hover,
+.pagination > .pagination-control > .control-box > .bullet-button:hover,
+.pagination > .pagination-control > .control-box > .left-arrow-button:hover,
+.pagination > .pagination-control > .control-box > .right-arrow-button:hover {
+    -fx-background-insets: 0;
+    -fx-background-color: #dbdace;
+    -fx-border-color: lightgray;
+}
+
+.pagination > .pagination-control > .control-box > .number-button:selected,
+.pagination > .pagination-control > .control-box > .bullet-button:selected{
+    -fx-background-insets: 0;
+    -fx-background-color: #78864E;
+    -fx-text-fill: white;
+}
